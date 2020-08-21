@@ -1,13 +1,19 @@
 import React from 'react';
 import styles from './App.module.css';
 import { Container } from 'reactstrap';
+import Header from '../header/header';
+import Pack from '../card/pack';
 
-function App() {
+const App = () => {
   return (
     <Container className={styles.app} fluid>
-      <h1 className={`${styles.header_title}`}>Ты сегодня покормил кота?</h1>
+      <Header />
+      <div className={styles.packs}>
+        <Pack />
+        <Pack />
+      </div>
     </Container>
   );
-}
+};
 
 export default App;
