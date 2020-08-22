@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './App.module.css';
 import { Container } from 'reactstrap';
 import Header from '../header/header';
-import Pack from '../card/pack';
+import Pack from '../pack/pack';
+// import Footertext from '../footertext';
 
 const App = () => {
   return (
