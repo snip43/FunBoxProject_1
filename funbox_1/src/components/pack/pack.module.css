@@ -1,4 +1,4 @@
-.card_full {
+.pack_full {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,63 +19,7 @@
     border: 4px solid #d91667;
 }
 
-.card_info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    padding-left: 49px;
-}
-
-.card_info_subtitle_top {
-    color: #666666;
-    font-family: 'Trebuchet MS';
-    font-size: 16px;
-    font-weight: 400;
-    /* margin: 0 auto; */
-    padding-top: 24px;
-}
-
-.card_info_title {
-    color: #000000;
-    font-family: 'Trebuchet MS';
-    font-size: 48px;
-    font-weight: 700;
-    /* align-self: center; */
-}
-
-.card_info_subtitle_bottom {
-    color: #000000;
-    font-family: 'Trebuchet MS';
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.card_info_text {
-    width: 106px;
-    height: 31px;
-    color: #666666;
-    font-family: 'Trebuchet MS';
-    font-size: 14px;
-    line-height: 16px;
-    font-family: 'Trebuchet MS';
-    font-weight: 700;
-}
-
-.card_imgCat {
-    background: url('../../img/imgCat.svg') 0 0/320px 273px no-repeat;
-    width: 320px;
-    height: 273px;
-    position: absolute;
-    bottom: -1px;
-    left: -1px;
-    border-radius: 10px;
-}
-
-.card_imgWeight {
+.pack_imgWeight {
     width: 81px;
     height: 81px;
     background-color: #1698d9;
@@ -87,11 +31,11 @@
     right: 10%;
 }
 
-.card_imgWeight:hover {
+.pack_imgWeight:hover {
     background-color: #d91667;
 }
 
-.card_imgWeight_content {
+.pack_imgWeight_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,23 +45,13 @@
     color: #fff;
 }
 
-.card_value_weight {
+.pack_value_weight {
     font-family: 'Trebuchet MS';
     font-size: 42px;
     font-weight: 400;
     line-height: 22px;
 }
 
-.card_value_text {
+.pack_value_text {
     font-size: 21px;
 }
-
-
-/* .card_imgCat img {
-    position: absolute;
-    left: 3px;
-    bottom: 3px;
-    width: 320px;
-    height: 273px;
-    border-radius: 10px;
-} */

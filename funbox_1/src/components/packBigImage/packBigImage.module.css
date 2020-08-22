@@ -1,0 +1,9 @@
+.pack_imgCat {
+    background: url('../../img/imgCat.svg') 0 0/320px 273px no-repeat;
+    width: 320px;
+    height: 273px;
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    border-radius: 10px;
+}
