@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 import styles from './pack.module.css';
@@ -9,33 +9,53 @@ import PackBigImage from '../packBigImage';
 import ImgWeight from '../imgWeight/imgWeight';
 import FootertextDisable from '../footertext_disable';
 
-const Pack = (props) => {
-  const FooterText = props.isDisable ? (
-    <FootertextDisable text_under_pack={props.card_text_disable} />
-  ) : (
-    <Footertext text_under_pack={props.text_under_pack} />
-  );
+class Pack extends Component {
+  state = {
+    isSelected: false,
+  };
 
-  return (
-    <Router>
-      <div className={styles.pack_full}>
-        <div className={props.isDisable ? styles.disabled : styles.pack}>
-          <Link to="#">
-            <PackInfo
-              card_info_title={props.card_info_title}
-              card_info_subtitle_top={props.card_info_subtitle_top}
-              card_info_subtitle_bottom={props.card_info_subtitle_bottom}
-              card_info_text={props.card_info_text}
-            />
-            <PackBigImage />
-            <ImgWeight card_weight={props.card_weight} />
-          </Link>
+  getSelected = () => {
+    this.setState({
+      isSelected: !this.state.isSelected,
+    });
+  };
+
+  render() {
+    const footerText = this.props.isDisable ? (
+      <FootertextDisable text_under_pack={this.props.card_text_disable} />
+    ) : (
+      <Footertext text_under_pack={this.props.text_under_pack} />
+    );
+
+    // console.log(this.state.isSelected);
+    return (
+      <Router>
+        <div className={styles.pack_full}>
+          <div
+            className={
+              this.props.isDisable
+                ? styles.disabled
+                : this.state.isSelected
+                ? styles.selected
+                : styles.pack
+            }
+            onClick={() => this.getSelected()}>
+            <Link to="#">
+              <PackInfo
+                card_info_title={this.props.card_info_title}
+                card_info_subtitle_top={this.props.card_info_subtitle_top}
+                card_info_subtitle_bottom={this.props.card_info_subtitle_bottom}
+                card_info_text={this.props.card_info_text}
+              />
+              <PackBigImage />
+              <ImgWeight card_weight={this.props.card_weight} selected={this.state.isSelected} />
+            </Link>
+          </div>
+          {footerText}
         </div>
-        {FooterText}
-        {/* <Footertext text_under_pack={props.isDisable ? text : props.text_under_pack} /> */}
-      </div>
-    </Router>
-  );
-};
+      </Router>
+    );
+  }
+}
 
 export default Pack;

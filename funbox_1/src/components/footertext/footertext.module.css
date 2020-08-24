@@ -1,8 +1,20 @@
-.card_footer_text {
+/* .card_footer_text {
+    width: 300px;
     color: #fff;
     font-size: 13px;
     line-height: 16px;
     text-shadow: 0 1px 0 #000000;
+} */
+
+.card_footer_text {
+    width: 207px;
+    height: 14px;
+    text-shadow: 0 1px 0 #000000;
+    color: #ffffff;
+    font-family: 'Trebuchet MS';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
 }
 
 a {

@@ -1,4 +1,5 @@
-.pack_imgWeight {
+.pack_imgWeight,
+.pack_hover {
     width: 81px;
     height: 81px;
     background-color: #1698d9;
@@ -10,9 +11,14 @@
     right: 10%;
 }
 
-.pack_imgWeight:hover {
+.pack_hover {
     background-color: #d91667;
 }
+
+
+/* .pack_imgWeight:hover {
+    background-color: #d91667;
+} */
 
 .pack_imgWeight_content {
     display: flex;

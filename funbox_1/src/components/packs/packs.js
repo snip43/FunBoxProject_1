@@ -6,6 +6,7 @@ const Packs = ({ packs }) => {
   const packItems = packs.map((elem) => (
     <Pack
       key={elem.id}
+      id={elem.id}
       card_imgCatSrc={elem.card_imgCatSrc}
       card_info_title={elem.info.card_info_title}
       card_info_subtitle_top={elem.info.card_info_subtitle_top}
