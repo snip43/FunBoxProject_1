@@ -8,7 +8,7 @@ const App = (props) => {
   const { header_text } = props.state;
 
   return (
-    <div className={`container-fluid ${styles.app}`}>
+    <div className={styles.app}>
       <Header header_text={header_text} />
       <Packs packs={props.state.packs} />
     </div>
