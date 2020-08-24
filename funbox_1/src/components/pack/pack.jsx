@@ -1,27 +1,40 @@
 import React from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
+
 import styles from './pack.module.css';
 
 import Footertext from '../footertext/footertext';
 import PackInfo from '../packInfo/packinfo';
 import PackBigImage from '../packBigImage';
+import ImgWeight from '../imgWeight/imgWeight';
+import FootertextDisable from '../footertext_disable';
 
-const Pack = () => {
+const Pack = (props) => {
+  const FooterText = props.isDisable ? (
+    <FootertextDisable text_under_pack={props.card_text_disable} />
+  ) : (
+    <Footertext text_under_pack={props.text_under_pack} />
+  );
+
   return (
-    <div className={styles.pack_full}>
-      <div className={styles.pack}>
-        <a href="#" className={styles.pack_link}>
-          <PackInfo />
-          <PackBigImage />
-          <div className={styles.pack_imgWeight}>
-            <div className={styles.pack_imgWeight_content}>
-              <span className={styles.pack_value_weight}>0,5</span>
-              <span className={styles.pack_value_text}> кг</span>
-            </div>
-          </div>
-        </a>
+    <Router>
+      <div className={styles.pack_full}>
+        <div className={props.isDisable ? styles.disabled : styles.pack}>
+          <Link to="#">
+            <PackInfo
+              card_info_title={props.card_info_title}
+              card_info_subtitle_top={props.card_info_subtitle_top}
+              card_info_subtitle_bottom={props.card_info_subtitle_bottom}
+              card_info_text={props.card_info_text}
+            />
+            <PackBigImage />
+            <ImgWeight card_weight={props.card_weight} />
+          </Link>
+        </div>
+        {FooterText}
+        {/* <Footertext text_under_pack={props.isDisable ? text : props.text_under_pack} /> */}
       </div>
-      <Footertext />
-    </div>
+    </Router>
   );
 };
 

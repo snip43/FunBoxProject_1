@@ -1,17 +1,16 @@
 import React from 'react';
 import styles from './App.module.css';
 import Header from '../header/header';
-import Pack from '../pack/pack';
-// import Footertext from '../footertext';
+import Packs from '../packs/packs';
+// import MyContext from '../../services/Context';
 
-const App = () => {
+const App = (props) => {
+  const { header_text } = props.state;
+
   return (
     <div className={`container-fluid ${styles.app}`}>
-      <Header />
-      <div className={styles.packs}>
-        <Pack />
-        <Pack />
-      </div>
+      <Header header_text={header_text} />
+      <Packs packs={props.state.packs} />
     </div>
   );
 };

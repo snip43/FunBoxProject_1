@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './footertext.module.css';
+// import { Link } from 'react-router-dom';
 
-const Footertext = () => {
+const Footertext = ({ text_under_pack }) => {
   return (
     <div className={styles.card_footer_text}>
-      Чего сидишь? Порадуй котэ,
-      <a href="#">купи</a>
+      {text_under_pack}
+      {/* <Link to="#">купи</Link> */}
     </div>
   );
 };

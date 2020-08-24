@@ -1,0 +1,36 @@
+.pack_imgWeight {
+    width: 81px;
+    height: 81px;
+    background-color: #1698d9;
+    color: #fff;
+    padding: 22px 13px 13px 12px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.pack_imgWeight:hover {
+    background-color: #d91667;
+}
+
+.pack_imgWeight_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 53px;
+    color: #fff;
+}
+
+.pack_value_weight {
+    font-family: 'Trebuchet MS';
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.pack_value_text {
+    font-size: 21px;
+}

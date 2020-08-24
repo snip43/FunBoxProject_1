@@ -1,0 +1,6 @@
+.text_disable {
+    color: yellow;
+    font-size: 13px;
+    line-height: 16px;
+    text-shadow: 0 1px 0 #000000;
+}

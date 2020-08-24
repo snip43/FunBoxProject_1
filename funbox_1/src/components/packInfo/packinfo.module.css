@@ -4,9 +4,17 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
+    justify-content: space-around;
+    align-items: flex-start;
     padding-left: 49px;
+    font-family: 'Trebuchet MS';
+    z-index: 100;
+}
+
+.pack_info_title,
+.pack_info_subtitle_bottom,
+.pack_info_text {
+    font-weight: 700;
 }
 
 .pack_info_subtitle_top {
@@ -19,25 +27,17 @@
 
 .pack_info_title {
     color: #000000;
-    font-family: 'Trebuchet MS';
     font-size: 48px;
-    font-weight: 700;
 }
 
 .pack_info_subtitle_bottom {
     color: #000000;
-    font-family: 'Trebuchet MS';
     font-size: 24px;
-    font-weight: 700;
 }
 
 .pack_info_text {
-    width: 106px;
-    height: 31px;
+    width: 150px;
     color: #666666;
-    font-family: 'Trebuchet MS';
     font-size: 14px;
     line-height: 16px;
-    font-family: 'Trebuchet MS';
-    font-weight: 700;
 }

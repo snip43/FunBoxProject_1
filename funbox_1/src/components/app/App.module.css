@@ -1,10 +1,5 @@
 .app {
-    min-height: 100vh;
+    min-height: 100%;
     padding: 47px;
     background-image: linear-gradient( to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
-}
-
-.packs {
-    display: flex;
-    justify-content: space-around;
 }
