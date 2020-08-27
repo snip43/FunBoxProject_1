@@ -1,6 +1,5 @@
 const state = {
   header_text: 'Ты сегодня покормил кота ?',
-
   packs: [
     {
       id: 1,
