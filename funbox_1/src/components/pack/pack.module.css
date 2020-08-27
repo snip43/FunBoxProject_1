@@ -43,11 +43,6 @@
     background: url('../../img/backSelected.png') center center no-repeat;
 }
 
-
-/* .pack:hover {
-    background: url('../../img/backSelected.png') center center no-repeat;
-} */
-
-.text_finish {
+.pack_info .text_finish {
     color: yellow;
 }

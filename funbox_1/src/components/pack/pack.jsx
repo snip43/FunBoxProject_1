@@ -61,6 +61,7 @@ class Pack extends Component {
                 card_weight={this.props.card_weight}
                 selected={this.state.isSelected}
                 isHover={this.state.isHover}
+                disabled={this.props.isDisable}
               />
             </Link>
           </div>

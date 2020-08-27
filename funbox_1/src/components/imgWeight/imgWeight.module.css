@@ -1,5 +1,6 @@
-.pack_imgWeight,
-.pack_hover {
+.imgWeight,
+.hover,
+.disabled {
     width: 81px;
     height: 81px;
     background-color: #1698d9;
@@ -11,16 +12,16 @@
     right: 10%;
 }
 
-.pack_hover {
+.hover {
+    cursor: pointer;
     background-color: #d91667;
 }
 
+.disabled {
+    background-color: #808080;
+}
 
-/* .pack_imgWeight:hover {
-    background-color: #d91667;
-} */
-
-.pack_imgWeight_content {
+.imgWeight_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,13 +31,12 @@
     color: #fff;
 }
 
-.pack_value_weight {
-    font-family: 'Trebuchet MS';
+.value_weight {
     font-size: 42px;
     font-weight: 400;
     line-height: 22px;
 }
 
-.pack_value_text {
+.value_text {
     font-size: 21px;
 }
