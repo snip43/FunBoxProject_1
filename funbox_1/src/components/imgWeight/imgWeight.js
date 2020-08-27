@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './imgWeight.module.css';
 
-const ImgWeight = ({ card_weight, selected }) => {
+const ImgWeight = ({ card_weight, selected, isHover }) => {
   const clSelected = `${styles.pack_hover}`;
   const clDefault = `${styles.pack_imgWeight}`;
-  const classes = selected ? clSelected : clDefault;
+  const classes = selected || isHover ? clSelected : clDefault;
 
   return (
     <div className={classes}>

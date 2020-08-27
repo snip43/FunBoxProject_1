@@ -34,9 +34,19 @@
     background: url('../../img/backSelected.png') center center no-repeat;
 }
 
-.pack:hover {
+.hover {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background-color: transparent;
+    border-radius: 10px;
     background: url('../../img/backSelected.png') center center no-repeat;
 }
+
+
+/* .pack:hover {
+    background: url('../../img/backSelected.png') center center no-repeat;
+} */
 
 .text_finish {
     color: yellow;

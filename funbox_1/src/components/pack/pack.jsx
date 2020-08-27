@@ -12,11 +12,17 @@ import FootertextDisable from '../footertext_disable';
 class Pack extends Component {
   state = {
     isSelected: false,
+    isHover: false,
   };
 
   getSelected = () => {
     this.setState({
       isSelected: !this.state.isSelected,
+    });
+  };
+  getHover = () => {
+    this.setState({
+      isHover: !this.state.isHover,
     });
   };
 
@@ -27,7 +33,6 @@ class Pack extends Component {
       <Footertext text_under_pack={this.props.text_under_pack} />
     );
 
-    // console.log(this.state.isSelected);
     return (
       <Router>
         <div className={styles.pack_full}>
@@ -37,9 +42,13 @@ class Pack extends Component {
                 ? styles.disabled
                 : this.state.isSelected
                 ? styles.selected
+                : this.state.isHover
+                ? styles.hover
                 : styles.pack
             }
-            onClick={() => this.getSelected()}>
+            onClick={() => this.getSelected()}
+            onMouseEnter={() => this.getHover()}
+            onMouseLeave={() => this.getHover()}>
             <Link to="#">
               <PackInfo
                 card_info_title={this.props.card_info_title}
@@ -48,7 +57,11 @@ class Pack extends Component {
                 card_info_text={this.props.card_info_text}
               />
               <PackBigImage />
-              <ImgWeight card_weight={this.props.card_weight} selected={this.state.isSelected} />
+              <ImgWeight
+                card_weight={this.props.card_weight}
+                selected={this.state.isSelected}
+                isHover={this.state.isHover}
+              />
             </Link>
           </div>
           {footerText}
