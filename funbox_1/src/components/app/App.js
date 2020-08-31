@@ -6,7 +6,7 @@ import Packs from '../packs/packs';
 const App = (props) => {
   const { header_text, packs } = props.state;
   return (
-    <div className={styles.app}>
+    <div className={`container ${styles.app}`}>
       <Header header_text={header_text} />
       <Packs packs={packs} />
     </div>

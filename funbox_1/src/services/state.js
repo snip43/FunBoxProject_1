@@ -5,7 +5,7 @@ const state = {
       id: 1,
       card_imgCatSrc: '../../img/imgCat.svg',
       card_weight: '0,5',
-      text_under_pack: 'Чего сидишь? Порадуй котэ,купи',
+      text_under_pack: `Чего сидишь? Порадуй котэ,купи`,
       card_text_disable: 'Печалька, с курой закончился.',
       info: {
         card_info_subtitle_top: 'Сказочное заморское яство',

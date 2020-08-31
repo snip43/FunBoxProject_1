@@ -27,10 +27,23 @@ class Pack extends Component {
   };
 
   render() {
-    const footerText = this.props.isDisable ? (
-      <FootertextDisable text_under_pack={this.props.card_text_disable} />
+    const {
+      card_info_title,
+      card_info_subtitle_top,
+      card_info_subtitle_bottom,
+      card_info_text,
+      card_text_disable,
+      text_under_pack,
+      isDisable,
+      card_weight,
+    } = this.props;
+
+    const { isSelected, isHover } = this.state;
+
+    let footerText = isDisable ? (
+      <FootertextDisable text_under_pack={card_text_disable} />
     ) : (
-      <Footertext text_under_pack={this.props.text_under_pack} />
+      <Footertext text_under_pack={text_under_pack} />
     );
 
     return (
@@ -38,11 +51,11 @@ class Pack extends Component {
         <div className={styles.pack_full}>
           <div
             className={
-              this.props.isDisable
+              isDisable
                 ? styles.disabled
-                : this.state.isSelected
+                : isSelected
                 ? styles.selected
-                : this.state.isHover
+                : isHover
                 ? styles.hover
                 : styles.pack
             }
@@ -51,17 +64,17 @@ class Pack extends Component {
             onMouseLeave={() => this.getHover()}>
             <Link to="#">
               <PackInfo
-                card_info_title={this.props.card_info_title}
-                card_info_subtitle_top={this.props.card_info_subtitle_top}
-                card_info_subtitle_bottom={this.props.card_info_subtitle_bottom}
-                card_info_text={this.props.card_info_text}
+                card_info_title={card_info_title}
+                card_info_subtitle_top={card_info_subtitle_top}
+                card_info_subtitle_bottom={card_info_subtitle_bottom}
+                card_info_text={card_info_text}
               />
               <PackBigImage />
               <ImgWeight
-                card_weight={this.props.card_weight}
-                selected={this.state.isSelected}
-                isHover={this.state.isHover}
-                disabled={this.props.isDisable}
+                card_weight={card_weight}
+                selected={isSelected}
+                isHover={isHover}
+                disabled={isDisable}
               />
             </Link>
           </div>
